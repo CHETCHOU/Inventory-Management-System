@@ -1,0 +1,24 @@
+Table: tuser
+----------+-------------+------+-----+---------+---------
+ Field    | Type        | Null | Key | Default | Remarks 
+----------+-------------+------+-----+---------+---------
+ tu_id    | BIGINT(19)  | NO   | PRI |         |         
+ password | VARCHAR(64) | NO   |     |         |         
+ username | VARCHAR(64) | YES  |     |         |         
+ role_id  | BIGINT(19)  | NO   |     |         |         
+----------+-------------+------+-----+---------+---------
+
+Table: devicestorage
+-----------------+-------------+------+-----+---------+---------
+ Field           | Type        | Null | Key | Default | Remarks 
+-----------------+-------------+------+-----+---------+---------
+ device_id       | INT(10)     | NO   | PRI |         |         
+ device_name     | VARCHAR(60) | YES  |     |         |         
+ device_brand    | VARCHAR(60) | YES  |     |         |         
+ device_model    | VARCHAR(60) | YES  |     |         |         
+ device_number   | INT(10)     | YES  |     |         |         
+ device_location | VARCHAR(60) | YES  |     |         |         
+ device_date     | DATE(10)    | YES  |     |         |         
+ device_note     | VARCHAR(60) | YES  |     |         |         
+-----------------+-------------+------+-----+---------+---------
+
