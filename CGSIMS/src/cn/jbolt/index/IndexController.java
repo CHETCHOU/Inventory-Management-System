@@ -58,15 +58,15 @@ public class IndexController extends Controller {
 		String newPwd1 = getPara("inputPassword3");
 		String newPwd2 = getPara("inputPassword4");
 		String queryId = "SELECT * from tuser where username = '" + userName + "'";
-		//String updatePwd = "UPDATE tuser SET password ='" +newPwd1 + "' WHERE tu_id ='" + idValue+"'";
 		users =Tuser.dao.findFirst(queryId);
 		idValue = users.getStr("tu_id").toString();
 		String pwd = users.getStr("password").toString();
 		if(newPwd1.equals(newPwd2)) {
 			if(pwd.equals(oldPwd)) {
-				user = Db.findById("tuser", idValue).set("password", newPwd1);
+				String updatePwd = "Update tuser set password = '"+ newPwd1 + "' where tu_id = '" + idValue + "'";
+				Db.update(updatePwd);
 				msg ="密码修改成功！";
-				renderJsp("editpwd.jsp");
+				renderText("密码修改成功！");
 			}else {
 				msg = "两次输入的密码不一致，请重新输入！";
 				json.put("msg",msg);

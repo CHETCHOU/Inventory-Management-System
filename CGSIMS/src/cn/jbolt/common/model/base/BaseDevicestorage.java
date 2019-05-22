@@ -81,4 +81,13 @@ public abstract class BaseDevicestorage<M extends BaseDevicestorage<M>> extends 
 		return getStr("device_note");
 	}
 
+	public M setDeviceAttri(java.lang.String deviceAttri) {
+		set("device_attri", deviceAttri);
+		return (M)this;
+	}
+	
+	public java.lang.String getDeviceAttri() {
+		return getStr("device_attri");
+	}
+
 }

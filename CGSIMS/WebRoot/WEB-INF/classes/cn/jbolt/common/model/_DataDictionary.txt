@@ -20,5 +20,6 @@ Table: devicestorage
  device_location | VARCHAR(60) | YES  |     |         |         
  device_date     | DATE(10)    | YES  |     |         |         
  device_note     | VARCHAR(60) | YES  |     |         |         
+ device_attri    | VARCHAR(11) | YES  |     |         |         
 -----------------+-------------+------+-----+---------+---------
 
